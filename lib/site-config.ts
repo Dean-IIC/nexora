@@ -9,7 +9,11 @@ export const siteConfig = {
   description:
     "Nexora 2.0 is a 24-hour national hackathon on Cyber Security and Edge IoT, in collaboration with IEEE CASS, C-DAC and DEFSEC. 11–12 December 2026.",
   theme: "Cyber Security & Edge IoT",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : "http://localhost:3000"),
   // Event starts 09:00 IST on 11 Dec 2026, ends 18:00 IST on 12 Dec 2026.
   startsAt: "2026-12-11T09:00:00+05:30",
   endsAt: "2026-12-12T18:00:00+05:30",
