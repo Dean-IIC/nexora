@@ -36,6 +36,7 @@ export const partners: Partner[] = [
     description:
       "DEFSEC brings defensive-security practitioners who design the Cyber Security problem statements, run the CTF side quest and judge the security track.",
     tracks: ["cyber-security"],
+    logo: logos.defsec,
   },
 ];
 
