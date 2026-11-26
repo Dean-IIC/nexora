@@ -27,9 +27,10 @@ export const siteConfig = {
   venue: "HKBK College of Engineering, Bengaluru",
   mode: "Offline · 24-hour sprint",
   teamSize: { min: 2, max: 4 },
+  fee: "₹800 per team",
   contact: {
-    email: "nexora@example.org", // TODO: replace with the official inbox
-    phone: "+91 00000 00000", // TODO
+    email: "nexora@hkbk.edu.in",
+    phone: "+91 8088184930",
   },
   socials: {
     instagram: "https://instagram.com/",
@@ -44,7 +45,6 @@ export const mainNav: NavItem[] = [
   { href: "/about", label: "About" },
   { href: "/tracks", label: "Tracks" },
   { href: "/schedule", label: "Schedule" },
-  { href: "/team", label: "Team" },
   { href: "/prizes", label: "Prizes" },
   { href: "/partners", label: "Partners" },
   { href: "/rules", label: "Rules" },

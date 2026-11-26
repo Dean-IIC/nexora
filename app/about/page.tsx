@@ -1,13 +1,21 @@
 import type { Metadata } from "next";
 import { Cpu, Lightbulb, ShieldCheck, Users } from "lucide-react";
 
+import { AboutCollege } from "@/components/features/about-college";
+import { Ceremonies } from "@/components/features/ceremonies";
 import { CtaBand } from "@/components/features/cta-band";
 import { HeroGraphic } from "@/components/features/graphics/hero-graphic";
+import { HodSpotlight } from "@/components/features/hod-spotlight";
 import { PageShell, SectionHeading } from "@/components/features/section-heading";
+import { MeetTheTeam } from "@/components/features/team-sections";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
+import { departments } from "@/lib/data/people";
 import { siteConfig } from "@/lib/site-config";
 
-export const metadata: Metadata = { title: "About", description: `What ${siteConfig.name} is and why it exists.` };
+export const metadata: Metadata = {
+  title: "About",
+  description: `About ${siteConfig.name}, ${siteConfig.host}, the AIML and ECE departments, our leaders and organising team.`,
+};
 
 const pillars = [
   { Icon: Cpu, title: "Edge-first thinking", text: "Billions of devices now compute at the edge. We want builders who can make them smarter, faster and leaner." },
@@ -16,12 +24,16 @@ const pillars = [
   { Icon: Lightbulb, title: "Real problems", text: "Problem statements come from real deployments — grids, farms, factories and SOCs." },
 ];
 
+/** About page order: Nexora 2.0 → HKBK → AIML dept → ECE dept → leaders → organisers → ceremonies. */
 export default function AboutPage() {
+  const aiml = departments.find((d) => d.id === "aiml");
+  const ece = departments.find((d) => d.id === "ece");
+
   return (
     <>
       <PageShell className="grid items-center gap-12 lg:grid-cols-2">
         <div className="space-y-6">
-          <SectionHeading as="h1" eyebrow="About" align="left" title="Where silicon meets security" />
+          <SectionHeading as="h1" eyebrow="About Nexora 2.0" align="left" title="Where silicon meets security" />
           <div className="space-y-4 text-lg text-muted-foreground">
             <p>
               <strong className="text-foreground">{siteConfig.name}</strong> is organised by{" "}
@@ -51,6 +63,11 @@ export default function AboutPage() {
           ))}
         </div>
       </PageShell>
+      <AboutCollege />
+      {aiml && <HodSpotlight department={aiml} eyebrow="About the department" />}
+      {ece && <HodSpotlight department={ece} eyebrow="About the department" reverse />}
+      <MeetTheTeam />
+      <Ceremonies />
       <CtaBand />
     </>
   );

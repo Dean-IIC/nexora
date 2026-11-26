@@ -53,7 +53,7 @@ export const prizes = {
 export const faqs: { q: string; a: string }[] = [
   { q: "Who can participate?", a: "Undergraduate and postgraduate students from any recognised institution in India. Teams may be inter-college." },
   { q: "What is the team size?", a: "2 to 4 members. Solo entries are not accepted, but you can find teammates in our community channel." },
-  { q: "Is there a registration fee?", a: "No. Participation is free for shortlisted teams. Meals, snacks and a workspace are provided during the event." },
+  { q: "Is there a registration fee?", a: "Yes — the registration fee is ₹800 per team. Meals, snacks and a workspace are provided during the event." },
   { q: "Can we switch tracks after registering?", a: "Yes, until registration closes. After shortlisting, your track is locked." },
   { q: "Do we need our own hardware for the Edge IoT track?", a: "Bring what you have. A shared hardware lab with dev boards, sensors and tools is available on a first-come basis. Simulated prototypes are also accepted." },
   { q: "Is offensive security allowed in the Cyber Security track?", a: "Only against targets you own or that are provided by the organisers. Any testing of third-party systems is grounds for disqualification." },

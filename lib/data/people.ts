@@ -1,5 +1,5 @@
 /**
- * People and ceremonies shown on the landing page and /team.
+ * People and ceremonies shown on the landing page and /about.
  * `name` is optional: when it is empty the card shows the role only, so nothing
  * placeholder-looking appears on the live site. Fill names in as they are confirmed.
  * `photo` is an optional path under /public (e.g. "/team/principal.jpg").

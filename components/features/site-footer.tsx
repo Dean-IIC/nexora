@@ -22,7 +22,7 @@ export function SiteFooter() {
           <Logo />
           <div className="flex flex-wrap items-center gap-4">
             <BrandLogo logo={logos.hkbk} alt="HKBK Group of Institutions" className="h-9" />
-            <BrandLogo logo={logos.ieeeBangalore} alt="IEEE Bangalore Section" className="h-7" />
+            <BrandLogo logo={logos.ieeeBangalore} alt="IEEE Bangalore Section" className="h-11" />
           </div>
           <p className="max-w-sm text-sm text-muted-foreground">
             <strong className="text-foreground">{siteConfig.officialLine}.</strong>

@@ -6,7 +6,15 @@ import { cn } from "@/lib/utils";
 import { Avatar } from "./person-card";
 
 /** "About the HOD" section for one department. `reverse` flips the layout on desktop. */
-export function HodSpotlight({ department: d, reverse = false }: { department: Department; reverse?: boolean }) {
+export function HodSpotlight({
+  department: d,
+  reverse = false,
+  eyebrow = "About the HOD",
+}: {
+  department: Department;
+  reverse?: boolean;
+  eyebrow?: string;
+}) {
   const isIoT = d.accent === "iot";
   const titleId = `hod-${d.id}-title`;
 
@@ -26,7 +34,7 @@ export function HodSpotlight({ department: d, reverse = false }: { department: D
 
         <div className="space-y-5">
           <p className={cn("font-mono text-xs tracking-[0.25em] uppercase", isIoT ? "text-iot" : "text-cyber")}>
-            <span aria-hidden>{"// "}</span>About the HOD · {d.short}
+            <span aria-hidden>{"// "}</span>{eyebrow} · {d.short}
           </p>
           <h2 id={titleId} className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">{d.name}</h2>
           {d.hod.bio && (

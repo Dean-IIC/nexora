@@ -10,7 +10,7 @@ Built with Next.js 15 (App Router), React 19, Tailwind CSS v4, shadcn/ui-style p
 | Route | Purpose |
 | --- | --- |
 | `/` | Hero with countdown, stats, both tracks, key dates, collaborators |
-| `/about` | Story and pillars of the event |
+| `/about` | Nexora 2.0, HKBK College, AIML & ECE departments, our leaders, organisers, ceremonies (`/team` redirects here) |
 | `/tracks` | Overview of both tracks |
 | `/tracks/edge-iot` | Track 01: focus areas, problem statements, judging, stack, checklist |
 | `/tracks/cyber-security` | Track 02: same structure, cyber-themed |
@@ -63,7 +63,7 @@ supabase/migrations/    database schema + RLS policies
 ## Logos & photos
 
 `public/logos/` holds partner logos downloaded from each organisation's own website:
-HKBK Group (hkbk.edu.in), IEEE Bangalore Section (ieeebangalore.org), IEEE CASS (ieee-cas.org)
+HKBK Group (hkbk.edu.in), IEEE Bangalore Section (ieeebangalore.org, `final-logo-2.png`), IEEE CASS (ieee-cas.org)
 and C-DAC (Wikimedia Commons); the DEFSEC logo was supplied by the organisers. Logos are registered
 marks of their owners; use them only with the organisations' consent and do not alter them.
 Logo metadata lives in `lib/data/logos.ts`.

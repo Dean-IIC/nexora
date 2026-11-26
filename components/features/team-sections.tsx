@@ -24,8 +24,8 @@ export function MeetTheTeam() {
       <PeopleGroup
         id="leaders-title"
         eyebrow="Meet the team"
-        title="Our leadership"
-        description="The leaders of HKBK College of Engineering who make Nexora 2.0 possible."
+        title="Our leaders"
+        description="The leaders of HKBK who make Nexora 2.0 possible."
         people={leaders}
         cols="sm:grid-cols-3 lg:grid-cols-5"
       />

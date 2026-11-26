@@ -14,7 +14,7 @@ export function CtaBand() {
           Ready to secure the edge?
         </h2>
         <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-          Registration closes {siteConfig.registrationDeadlineLabel}. Free to participate — meals, mentors and hardware lab included.
+          Registration closes {siteConfig.registrationDeadlineLabel}. Registration fee {siteConfig.fee} — meals, mentors and hardware lab included.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Button asChild variant="gradient" size="lg">

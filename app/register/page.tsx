@@ -18,7 +18,7 @@ export default async function RegisterPage({ searchParams }: { searchParams: Pro
   const facts = [
     { Icon: Users, label: "Team size", value: `${siteConfig.teamSize.min}–${siteConfig.teamSize.max} members` },
     { Icon: CalendarClock, label: "Deadline", value: siteConfig.registrationDeadlineLabel },
-    { Icon: Wallet, label: "Fee", value: "Free" },
+    { Icon: Wallet, label: "Registration fee", value: siteConfig.fee },
   ];
 
   return (
