@@ -1,6 +1,8 @@
 import { Building2, GraduationCap } from "lucide-react";
 
+import { logos } from "@/lib/data/logos";
 import { college } from "@/lib/data/people";
+import { BrandLogo } from "./brand-logo";
 import { siteConfig } from "@/lib/site-config";
 import { SectionHeading } from "./section-heading";
 
@@ -12,14 +14,13 @@ export function AboutCollege() {
           <div aria-hidden className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,var(--grid-line)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-line)_1px,transparent_1px)] bg-[size:28px_28px]" />
           <div aria-hidden className="absolute -right-16 -bottom-16 -z-10 size-64 rounded-full bg-cyber/20 blur-3xl" />
           <div aria-hidden className="absolute -top-16 -left-16 -z-10 size-56 rounded-full bg-iot/20 blur-3xl" />
-          <div className="flex items-center gap-3">
-            <span className="grid size-14 place-items-center rounded-2xl bg-gradient-to-br from-iot to-cyber text-white dark:text-background">
-              <GraduationCap className="size-7" aria-hidden />
-            </span>
-            <div>
+          <div className="space-y-4">
+            <BrandLogo logo={logos.hkbk} alt="HKBK Group of Institutions" className="h-14" />
+            <div className="flex items-center gap-2">
+              <GraduationCap className="size-5 text-primary" aria-hidden />
               <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase">Host institution</p>
-              <p className="text-xl font-semibold">{college.name}</p>
             </div>
+            <p className="text-xl font-semibold">{college.name}</p>
           </div>
           <dl className="mt-8 grid grid-cols-2 gap-4">
             {college.highlights.map((h) => (

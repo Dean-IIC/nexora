@@ -2,7 +2,9 @@ import Link from "next/link";
 import { Briefcase, Camera, GitBranch, Mail } from "lucide-react";
 
 import { mainNav, siteConfig } from "@/lib/site-config";
+import { logos } from "@/lib/data/logos";
 import { tracks } from "@/lib/data/tracks";
+import { BrandLogo } from "./brand-logo";
 import { Logo } from "./logo";
 
 export function SiteFooter() {
@@ -18,6 +20,10 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr]">
         <div className="space-y-4">
           <Logo />
+          <div className="flex flex-wrap items-center gap-4">
+            <BrandLogo logo={logos.hkbk} alt="HKBK Group of Institutions" className="h-9" />
+            <BrandLogo logo={logos.ieeeBangalore} alt="IEEE Bangalore Section" className="h-7" />
+          </div>
           <p className="max-w-sm text-sm text-muted-foreground">
             <strong className="text-foreground">{siteConfig.officialLine}.</strong>
             <br />

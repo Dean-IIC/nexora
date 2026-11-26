@@ -59,3 +59,13 @@ components/features/    assembled sections, forms, graphics/ (custom animated SV
 lib/                    utils, site config, data, validations (zod), supabase client + types
 supabase/migrations/    database schema + RLS policies
 ```
+
+## Logos & photos
+
+`public/logos/` holds partner logos downloaded from each organisation's own website:
+HKBK Group (hkbk.edu.in), IEEE Bangalore Section (ieeebangalore.org), IEEE CASS (ieee-cas.org)
+and C-DAC (Wikimedia Commons). DEFSEC has no logo yet and is shown as text. Logos are registered
+marks of their owners; use them only with the organisations' consent and do not alter them.
+Logo metadata lives in `lib/data/logos.ts`.
+
+`public/team/` holds people photos (512px WebP); assign them in `lib/data/people.ts`.

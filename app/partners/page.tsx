@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { PageShell, SectionHeading } from "@/components/features/section-heading";
+import { BrandLogo } from "@/components/features/brand-logo";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { partners } from "@/lib/data/content";
@@ -23,7 +24,11 @@ export default function PartnersPage() {
         {partners.map((p) => (
           <Card key={p.name} className="gap-5">
             <div className="grid h-28 place-items-center rounded-lg border bg-gradient-to-br from-iot/10 to-cyber/10">
-              <span className="text-3xl font-semibold tracking-tight">{p.name}</span>
+              {p.logo ? (
+                <BrandLogo logo={p.logo} alt={p.name} className="h-16" />
+              ) : (
+                <span className="text-3xl font-semibold tracking-tight">{p.name}</span>
+              )}
             </div>
             <div className="flex flex-wrap gap-2">
               {p.tracks.map((slug) => {
@@ -31,7 +36,10 @@ export default function PartnersPage() {
                 return t ? <Badge key={slug} variant={t.accent}>{t.name}</Badge> : null;
               })}
             </div>
-            <CardTitle className="text-base">{p.role}</CardTitle>
+            <div className="space-y-1">
+              <CardTitle>{p.name}</CardTitle>
+              <p className="text-sm font-medium text-primary">{p.role}</p>
+            </div>
             <CardDescription>{p.description}</CardDescription>
           </Card>
         ))}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { partners } from "@/lib/data/content";
+import { BrandLogo } from "./brand-logo";
 
 export function PartnerStrip() {
   return (
@@ -13,9 +14,15 @@ export function PartnerStrip() {
           <li key={p.name}>
             <Link
               href="/partners"
-              className="flex h-full flex-col items-center gap-1 rounded-xl border bg-card px-6 py-8 text-center backdrop-blur transition-colors hover:border-primary/50"
+              className="flex h-full flex-col items-center gap-3 rounded-xl border bg-card px-6 py-8 text-center backdrop-blur transition-colors hover:border-primary/50"
             >
-              <span className="text-2xl font-semibold tracking-tight">{p.name}</span>
+              <span className="grid h-14 place-items-center">
+                {p.logo ? (
+                  <BrandLogo logo={p.logo} alt={p.name} className="h-12" />
+                ) : (
+                  <span className="text-2xl font-semibold tracking-tight">{p.name}</span>
+                )}
+              </span>
               <span className="text-xs text-muted-foreground">{p.role}</span>
             </Link>
           </li>

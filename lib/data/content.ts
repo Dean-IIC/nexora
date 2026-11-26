@@ -1,6 +1,9 @@
+import type { LogoAsset } from "@/components/features/brand-logo";
+
+import { logos } from "./logos";
 import type { TrackSlug } from "./tracks";
 
-export type Partner = { name: string; role: string; description: string; tracks: TrackSlug[] };
+export type Partner = { name: string; role: string; description: string; tracks: TrackSlug[]; logo?: LogoAsset };
 
 export const partners: Partner[] = [
   {
@@ -9,6 +12,7 @@ export const partners: Partner[] = [
     description:
       "Nexora 2.0 is organised by HKBK College of Engineering in association with the IEEE Bangalore Chapter, connecting participants with IEEE's professional community, mentors and judges.",
     tracks: ["edge-iot", "cyber-security"],
+    logo: logos.ieeeBangalore,
   },
   {
     name: "IEEE CASS",
@@ -16,10 +20,12 @@ export const partners: Partner[] = [
     description:
       "The IEEE Circuits and Systems Society advances the theory, design and application of circuits and systems — the foundation of every edge device. CASS mentors shape the Edge IoT track.",
     tracks: ["edge-iot"],
+    logo: logos.ieeeCass,
   },
   {
     name: "C-DAC",
     role: "Knowledge Partner — Both Tracks",
+    logo: logos.cdac,
     description:
       "The Centre for Development of Advanced Computing is India's premier R&D organisation for IT and electronics, spanning embedded systems, HPC and cyber security.",
     tracks: ["edge-iot", "cyber-security"],
