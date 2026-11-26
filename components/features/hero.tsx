@@ -29,7 +29,7 @@ export function Hero() {
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <BrandLogo logo={logos.hkbk} alt={siteConfig.host} className="h-11" />
             <span className="text-sm text-muted-foreground">in association with</span>
-            <BrandLogo logo={logos.ieeeBangalore} alt={siteConfig.association} className="h-12" />
+            <BrandLogo logo={logos.ieeeBangalore} alt={siteConfig.association} className="h-10" />
           </div>
           <h1 className="text-5xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-6xl lg:text-7xl">
             Nexora{" "}

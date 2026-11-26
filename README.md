@@ -63,7 +63,7 @@ supabase/migrations/    database schema + RLS policies
 ## Logos & photos
 
 `public/logos/` holds partner logos downloaded from each organisation's own website:
-HKBK Group (hkbk.edu.in), IEEE Bangalore Section (ieeebangalore.org, `final-logo-2.png`), IEEE CASS (ieee-cas.org)
+HKBK Group (hkbk.edu.in), IEEE Bangalore Section (ieeebangalore.org: `final-logo-2.png`, background made transparent, plus the section's official white version for dark mode), IEEE CASS (ieee-cas.org)
 and C-DAC (Wikimedia Commons); the DEFSEC logo was supplied by the organisers. Logos are registered
 marks of their owners; use them only with the organisations' consent and do not alter them.
 Logo metadata lives in `lib/data/logos.ts`.
