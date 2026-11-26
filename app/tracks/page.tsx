@@ -13,7 +13,7 @@ export default function TracksPage() {
         as="h1"
         eyebrow="Tracks"
         title="Choose your battlefield"
-        description="Two independent tracks with their own problem statements, mentors, judges and prizes. Pick one when you register."
+        description="Two independent tracks with their own problem statements, mentors and judges. Pick one when you register."
       />
       <div className="grid gap-6 lg:grid-cols-2">
         {tracks.map((t) => <TrackCard key={t.slug} track={t} />)}

@@ -28,7 +28,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="Two tracks"
           title={<span id="tracks-heading">Build the device. Defend the device.</span>}
-          description="Every team competes in one track. Each track has its own problem statements, mentors, judges and prizes."
+          description="Every team competes in one track. Each track has its own problem statements, mentors and judges."
         />
         <div className="grid gap-6 lg:grid-cols-2">
           {tracks.map((t) => <TrackCard key={t.slug} track={t} />)}

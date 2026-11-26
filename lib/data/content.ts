@@ -33,22 +33,13 @@ export const partners: Partner[] = [
   },
 ];
 
-// TODO: confirm amounts with the organising committee.
 export const prizes = {
-  grand: [
-    { place: "Winner", amount: "₹50,000", perks: ["Trophy & certificates", "Incubation interview", "Partner internship fast-track"] },
-    { place: "1st Runner-up", amount: "₹30,000", perks: ["Trophy & certificates", "Mentorship sessions"] },
-    { place: "2nd Runner-up", amount: "₹20,000", perks: ["Trophy & certificates", "Swag kits"] },
-  ],
-  perTrack: [
-    { title: "Best Edge IoT Hack", track: "edge-iot" as const, amount: "₹15,000" },
-    { title: "Best Cyber Security Hack", track: "cyber-security" as const, amount: "₹15,000" },
-  ],
-  special: [
-    { title: "Best Hardware Build", amount: "₹7,500" },
-    { title: "CTF Champion", amount: "₹5,000" },
-    { title: "Best First-time Team", amount: "₹5,000" },
-    { title: "Best All-women Team", amount: "₹5,000" },
+  pool: "₹75,000",
+  poolShort: "₹75K",
+  positions: ["Winner", "1st Runner-up", "2nd Runner-up"],
+  certificates: [
+    { title: "Winner's certificate", text: "Awarded to every member of the winning teams." },
+    { title: "Certificate of participation", text: "For every participant who takes part in the hackathon." },
   ],
 };
 

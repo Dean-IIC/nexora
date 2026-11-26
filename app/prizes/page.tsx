@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 
 import { CtaBand } from "@/components/features/cta-band";
-import { GrandPrizes, SpecialPrizes, TrackPrizes } from "@/components/features/prize-sections";
+import { Certificates, PrizePool, WinnerPositions } from "@/components/features/prize-sections";
 import { PageShell, SectionHeading } from "@/components/features/section-heading";
+import { prizes } from "@/lib/data/content";
 
-export const metadata: Metadata = { title: "Prizes", description: "₹1.5 lakh+ in prizes across grand, track and special categories." };
+export const metadata: Metadata = {
+  title: "Prizes",
+  description: `${prizes.poolShort} total prize pool, winner's certificates and certificates of participation.`,
+};
 
 export default function PrizesPage() {
   return (
@@ -13,21 +17,18 @@ export default function PrizesPage() {
         <SectionHeading
           as="h1"
           eyebrow="Prizes"
-          title="₹1.5 lakh+ prize pool"
-          description="Grand prizes are judged across both tracks at the finale. Track prizes and special awards are judged separately."
+          title={`${prizes.poolShort} prize pool`}
+          description="Winners are announced and awarded at the valedictory ceremony on 12 December."
         />
-        <GrandPrizes />
-        <section aria-labelledby="track-prizes" className="space-y-8">
-          <SectionHeading eyebrow="Per track" title={<span id="track-prizes">Track champions</span>} align="left" />
-          <TrackPrizes />
+        <PrizePool />
+        <section aria-labelledby="positions" className="space-y-10">
+          <SectionHeading eyebrow="Winners" title={<span id="positions">Top three teams</span>} />
+          <WinnerPositions />
         </section>
-        <section aria-labelledby="special" className="space-y-8">
-          <SectionHeading eyebrow="Special awards" title={<span id="special">More ways to win</span>} align="left" />
-          <SpecialPrizes />
+        <section aria-labelledby="certs" className="space-y-8">
+          <SectionHeading eyebrow="Certificates" title={<span id="certs">Everyone takes something home</span>} />
+          <Certificates />
         </section>
-        <p className="text-center text-sm text-muted-foreground">
-          Every participant receives a certificate of participation and event swag.
-        </p>
       </PageShell>
       <CtaBand />
     </>
