@@ -17,7 +17,7 @@ export default function PrizesPage() {
         <SectionHeading
           as="h1"
           eyebrow="Prizes"
-          title={`${prizes.poolShort} prize pool`}
+          title="Prizes & recognition"
           description="Winners are announced and awarded at the valedictory ceremony on 12 December."
         />
         <PrizePool />
