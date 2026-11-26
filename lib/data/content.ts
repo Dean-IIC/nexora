@@ -4,6 +4,13 @@ export type Partner = { name: string; role: string; description: string; tracks:
 
 export const partners: Partner[] = [
   {
+    name: "IEEE Bangalore",
+    role: "In association with — IEEE Bangalore Chapter",
+    description:
+      "Nexora 2.0 is organised by HKBK College of Engineering in association with the IEEE Bangalore Chapter, connecting participants with IEEE's professional community, mentors and judges.",
+    tracks: ["edge-iot", "cyber-security"],
+  },
+  {
     name: "IEEE CASS",
     role: "Technical Collaborator — Edge IoT",
     description:

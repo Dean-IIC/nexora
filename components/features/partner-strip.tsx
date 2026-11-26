@@ -8,7 +8,7 @@ export function PartnerStrip() {
       <h2 id="partners-strip" className="mb-8 text-center font-mono text-xs tracking-[0.25em] text-muted-foreground uppercase">
         In collaboration with
       </h2>
-      <ul className="grid gap-4 sm:grid-cols-3">
+      <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {partners.map((p) => (
           <li key={p.name}>
             <Link

@@ -24,7 +24,9 @@ export default function AboutPage() {
           <SectionHeading as="h1" eyebrow="About" align="left" title="Where silicon meets security" />
           <div className="space-y-4 text-lg text-muted-foreground">
             <p>
-              <strong className="text-foreground">{siteConfig.name}</strong> is the second edition of Nexora — a 24-hour
+              <strong className="text-foreground">{siteConfig.name}</strong> is organised by{" "}
+              <strong className="text-foreground">{siteConfig.host}</strong> in association with{" "}
+              <strong className="text-foreground">{siteConfig.association}</strong>. It is the second edition of Nexora — a 24-hour
               hackathon themed on <strong className="text-foreground">{siteConfig.theme}</strong>, held on {siteConfig.dateLabel}.
             </p>
             <p>

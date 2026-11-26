@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
 
+import { AssociationBanner } from "@/components/features/association-banner";
 import { SiteFooter } from "@/components/features/site-footer";
 import { SiteHeader } from "@/components/features/site-header";
 import { ThemeProvider } from "@/components/features/theme-provider";
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: { default: `${siteConfig.name} — ${siteConfig.theme} Hackathon`, template: `%s · ${siteConfig.name}` },
   description: siteConfig.description,
-  keywords: ["hackathon", "cyber security", "edge IoT", "IEEE CASS", "C-DAC", "DEFSEC", "Nexora"],
+  keywords: ["hackathon", "HKBK College of Engineering", "IEEE Bangalore", "cyber security", "edge IoT", "IEEE CASS", "C-DAC", "DEFSEC", "Nexora"],
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} min-h-dvh font-sans antialiased`}>
         <ThemeProvider>
           <div className="flex min-h-dvh flex-col">
+            <AssociationBanner />
             <SiteHeader />
             <main id="main" className="flex-1">
               {children}

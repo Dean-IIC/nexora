@@ -8,7 +8,7 @@ import { partners } from "@/lib/data/content";
 import { getTrack } from "@/lib/data/tracks";
 import { siteConfig } from "@/lib/site-config";
 
-export const metadata: Metadata = { title: "Partners", description: "Nexora 2.0 is organised in collaboration with IEEE CASS, C-DAC and DEFSEC." };
+export const metadata: Metadata = { title: "Partners", description: "Nexora 2.0 is organised by HKBK College of Engineering in association with IEEE Bangalore Chapter, with IEEE CASS, C-DAC and DEFSEC." };
 
 export default function PartnersPage() {
   return (
@@ -17,9 +17,9 @@ export default function PartnersPage() {
         as="h1"
         eyebrow="Partners"
         title="Built with the best"
-        description="Our collaborators design problem statements, mentor teams and sit on the jury."
+        description="Organised by HKBK College of Engineering in association with IEEE Bangalore Chapter. Our collaborators design problem statements, mentor teams and sit on the jury."
       />
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2">
         {partners.map((p) => (
           <Card key={p.name} className="gap-5">
             <div className="grid h-28 place-items-center rounded-lg border bg-gradient-to-br from-iot/10 to-cyber/10">

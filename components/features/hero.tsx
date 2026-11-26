@@ -24,6 +24,11 @@ export function Hero() {
             <span className="size-1.5 rounded-full bg-primary animate-pulse" aria-hidden />
             Registrations open · 24-hour hackathon
           </Badge>
+          <p className="text-sm font-medium sm:text-base">
+            <span className="text-foreground">{siteConfig.host}</span>
+            <span className="text-muted-foreground"> in association with </span>
+            <span className="text-foreground">{siteConfig.association}</span>
+          </p>
           <h1 className="text-5xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-6xl lg:text-7xl">
             Nexora{" "}
             <span className="bg-gradient-to-r from-iot via-primary to-cyber bg-clip-text text-transparent">2.0</span>

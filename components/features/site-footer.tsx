@@ -19,7 +19,9 @@ export function SiteFooter() {
         <div className="space-y-4">
           <Logo />
           <p className="max-w-sm text-sm text-muted-foreground">
-            {siteConfig.dateLabel} · {siteConfig.venue}. In collaboration with IEEE CASS, C-DAC and DEFSEC.
+            <strong className="text-foreground">{siteConfig.officialLine}.</strong>
+            <br />
+            {siteConfig.dateLabel} · {siteConfig.venue}. With IEEE CASS, C-DAC and DEFSEC.
           </p>
           <ul className="flex gap-2">
             {socials.map(({ href, label, Icon }) => (
