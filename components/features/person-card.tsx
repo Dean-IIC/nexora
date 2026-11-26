@@ -37,7 +37,7 @@ export function Avatar({ person, size = "md", className }: { person: Person; siz
 export function PersonCard({ person, className }: { person: Person; className?: string }) {
   return (
     <div className={cn("flex h-full flex-col items-center gap-3 rounded-xl border bg-card p-5 text-center backdrop-blur transition-colors hover:border-primary/40", className)}>
-      <Avatar person={person} />
+      <Avatar person={person} size="lg" />
       <div className="space-y-1">
         <h3 className="leading-tight font-semibold">{person.name ?? person.role}</h3>
         {person.name && <p className="text-sm text-primary">{person.role}</p>}

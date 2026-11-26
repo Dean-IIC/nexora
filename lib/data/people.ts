@@ -57,9 +57,9 @@ export const departments: Department[] = [
 
 /** Leadership grid — designed for up to 10 people (5 per row on desktop). */
 export const leaders: Person[] = [
-  { role: "Chairman", org: "HKBK Group of Institutions" }, // TODO: name
-  { role: "Director", org: "HKBK College of Engineering" }, // TODO: name
-  { role: "Principal", org: "HKBK College of Engineering" }, // TODO: name
+  { name: "C. M. Ibrahim", role: "Chairman", org: "HKBK Group of Institutions", photo: "/team/chairman-cm-ibrahim.webp" },
+  { name: "C. M. Faiz", role: "Director", org: "HKBK College of Engineering", photo: "/team/director-cm-faiz.webp" },
+  { name: "Dr. Riaz Ahmed", role: "Principal", org: "HKBK College of Engineering", photo: "/team/principal-riaz-ahmed.webp" },
   { role: "HOD, AIML", org: "HKBK College of Engineering" }, // TODO: name
   { role: "HOD, ECE", org: "HKBK College of Engineering" }, // TODO: name
 ];
@@ -73,8 +73,8 @@ export const facultyOrganisers: Person[] = [
 export const studentOrganisers: Person[] = [
   { name: "Hanzala Jawwad", role: "Student Organiser" },
   { name: "Rehan", role: "Student Organiser" },
-  { name: "Shaob H Jamadar", role: "Student Organiser" },
-  { name: "Mateen U S", role: "Student Organiser" },
+  { name: "Shaob H Jamadar", role: "Student Organiser", photo: "/team/shaob-h-jamadar.webp" },
+  { name: "Mateen U S", role: "Student Organiser", photo: "/team/mateen-u-s.webp" },
 ];
 
 export type Ceremony = {
