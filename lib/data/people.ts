@@ -65,7 +65,7 @@ export const leaders: Person[] = [
 ];
 
 export const facultyOrganisers: Person[] = [
-  { name: "Prof. Afreen", role: "Faculty Coordinator" },
+  { name: "Prof. Afreen", role: "Faculty Coordinator", photo: "/team/prof-afreen.webp" },
   { name: "Prof. Nelvita", role: "Faculty Coordinator", photo: "/team/prof-nelvita.webp" },
   { name: "Prof. Saroja", role: "Faculty Coordinator", photo: "/team/prof-saroja.webp" },
 ];
