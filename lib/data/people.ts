@@ -40,7 +40,7 @@ export const departments: Department[] = [
     about:
       "The AIML department trains engineers to design intelligent systems — from data and learning algorithms to secure, responsible deployment. Its students bring machine-learning depth to threat detection, anomaly analysis and on-device intelligence.",
     focus: ["Machine learning", "Deep learning", "Data analytics", "AI for security"],
-    hod: { role: "Head of Department, AIML" }, // TODO: add name, photo and bio
+    hod: { name: "Tabassum", role: "Head of Department, AIML & Dean, IIC", photo: "/team/hod-aiml-tabassum.webp" }, // TODO: add bio
     accent: "cyber",
   },
   {
@@ -60,7 +60,7 @@ export const leaders: Person[] = [
   { name: "C. M. Ibrahim", role: "Chairman", org: "HKBK Group of Institutions", photo: "/team/chairman-cm-ibrahim.webp" },
   { name: "C. M. Faiz", role: "Director", org: "HKBK College of Engineering", photo: "/team/director-cm-faiz.webp" },
   { name: "Dr. Riaz Ahmed", role: "Principal", org: "HKBK College of Engineering", photo: "/team/principal-riaz-ahmed.webp" },
-  { role: "HOD, AIML", org: "HKBK College of Engineering" }, // TODO: name
+  { name: "Tabassum", role: "HOD, AIML & Dean, IIC", org: "HKBK College of Engineering", photo: "/team/hod-aiml-tabassum.webp" },
   { role: "HOD, ECE", org: "HKBK College of Engineering" }, // TODO: name
 ];
 
@@ -71,8 +71,8 @@ export const facultyOrganisers: Person[] = [
 ];
 
 export const studentOrganisers: Person[] = [
-  { name: "Hanzala Jawwad", role: "Student Organiser" },
-  { name: "Rehan", role: "Student Organiser" },
+  { name: "Hanzala Jawwad", role: "Student Organiser", photo: "/team/hanzala-jawwad.webp" },
+  { name: "Rehan", role: "Student Organiser", photo: "/team/rehan.webp" },
   { name: "Shaob H Jamadar", role: "Student Organiser", photo: "/team/shaob-h-jamadar.webp" },
   { name: "Mateen U S", role: "Student Organiser", photo: "/team/mateen-u-s.webp" },
 ];
