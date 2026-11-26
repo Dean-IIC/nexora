@@ -32,9 +32,9 @@ export const partners: Partner[] = [
   },
   {
     name: "DEFSEC",
-    role: "Security Collaborator — Cyber Security",
+    role: "Defence Security · Security Collaborator — Cyber Security",
     description:
-      "DEFSEC brings defensive-security practitioners who design the Cyber Security problem statements, run the CTF side quest and judge the security track.",
+      "DEFSEC (Defence Security) is the security collaborator for Nexora 2.0, bringing defence-security expertise to the Cyber Security track through problem statements, mentoring and judging.",
     tracks: ["cyber-security"],
   },
 ];
