@@ -38,16 +38,12 @@ function CeremonyCard({ c }: { c: Ceremony }) {
       <p className="text-sm text-muted-foreground">{c.description}</p>
       {c.chiefGuest && (
         <div className="mt-auto flex items-center gap-4 rounded-xl border bg-background/60 p-4">
-          <Avatar person={c.chiefGuest} size="sm" />
+          <Avatar person={c.chiefGuest} size="md" />
           <div>
             <p className="font-mono text-[10px] tracking-widest text-muted-foreground uppercase">Chief Guest</p>
             <p className="font-semibold">{guestNamed ? c.chiefGuest.name : "To be announced"}</p>
-            {guestNamed && (
-              <p className="text-sm text-muted-foreground">
-                {c.chiefGuest.role}
-                {c.chiefGuest.org && <>, <span className="text-foreground">{c.chiefGuest.org}</span></>}
-              </p>
-            )}
+            {guestNamed && <p className="text-sm text-foreground/90">{c.chiefGuest.role}</p>}
+            {guestNamed && c.chiefGuest.org && <p className="text-xs text-muted-foreground">{c.chiefGuest.org}</p>}
           </div>
         </div>
       )}

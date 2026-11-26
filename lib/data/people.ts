@@ -94,7 +94,12 @@ export const ceremonies: Ceremony[] = [
     date: "Fri, 11 December 2026",
     time: "09:00 – 10:00 AM IST", // TODO: confirm
     description: "Opening ceremony, welcome address and launch of Nexora 2.0.",
-    chiefGuest: { name: "Altaf Balsing", role: "Cyber Security Expert", org: "Cisco" },
+    chiefGuest: {
+      name: "Altaf Balsing",
+      role: "Co-founder, DEFSEC Systems and Security Pvt. Ltd.",
+      org: "Cyber Security Expert, Cisco",
+      photo: "/team/altaf-balsing.webp",
+    },
     accent: "cyber",
   },
   {
