@@ -78,10 +78,10 @@ export const facultyOrganisers: Person[] = [
 ];
 
 export const studentOrganisers: Person[] = [
-  { name: "Hanzala Jawwad", role: "Student Organiser", photo: "/team/hanzala-jawwad.webp" },
-  { name: "Rehan", role: "Student Organiser", photo: "/team/rehan.webp" },
-  { name: "Shoaib H Jamadar", role: "Student Organiser", photo: "/team/shoaib-h-jamadar.webp" },
-  { name: "Mateen U S", role: "Student Organiser", photo: "/team/mateen-u-s.webp" },
+  { name: "Mr. Hanzala Jawwad", role: "Student Organiser", photo: "/team/hanzala-jawwad.webp" },
+  { name: "Mr. Rehan", role: "Student Organiser", photo: "/team/rehan.webp" },
+  { name: "Mr. Shoaib H Jamadar", role: "Student Organiser", photo: "/team/shoaib-h-jamadar.webp" },
+  { name: "Mr. Mateen U S", role: "Student Organiser", photo: "/team/mateen-u-s.webp" },
   { name: "Ms. Zaiba", role: "Student Organiser" },
   { name: "Mr. Mohammed Ikram", role: "Student Organiser" },
   { name: "Mr. Sai Charan", role: "Student Organiser" },
