@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 function initials(name: string) {
   return name
-    .replace(/^(Prof|Dr|Mr|Ms|Mrs)\.?\s+/i, "")
+    .replace(/^(Prof|Dr|Mr|Ms|Mrs)\.?\s*/i, "")
     .split(/\s+/)
     .filter(Boolean)
     .slice(0, 2)

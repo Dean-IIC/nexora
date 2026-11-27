@@ -34,7 +34,7 @@ export function MeetTheTeam() {
         eyebrow="Organising team"
         title="Faculty organisers"
         people={facultyOrganisers}
-        cols="sm:grid-cols-3 lg:mx-auto lg:max-w-4xl"
+        cols="sm:grid-cols-3 lg:grid-cols-5"
       />
       <PeopleGroup
         id="students-title"
@@ -42,7 +42,7 @@ export function MeetTheTeam() {
         title="Student organisers"
         description="The students running Nexora 2.0 on the ground — reach out to them with any questions on the day."
         people={studentOrganisers}
-        cols="sm:grid-cols-4 lg:mx-auto lg:max-w-5xl"
+        cols="sm:grid-cols-3 lg:grid-cols-5"
       />
     </section>
   );

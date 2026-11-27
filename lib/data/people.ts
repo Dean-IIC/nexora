@@ -68,6 +68,13 @@ export const facultyOrganisers: Person[] = [
   { name: "Prof. Afreen", role: "Faculty Coordinator", photo: "/team/prof-afreen.webp" },
   { name: "Prof. Nelvita", role: "Faculty Coordinator", photo: "/team/prof-nelvita.webp" },
   { name: "Prof. Saroja", role: "Faculty Coordinator", photo: "/team/prof-saroja.webp" },
+  { name: "Prof. Aushij Singh", role: "Faculty Coordinator" },
+  { name: "Prof. Arun Kumar", role: "Faculty Coordinator" },
+  { name: "Prof. Nabeel Baig", role: "Faculty Coordinator" },
+  { name: "Dr. Aryalekshmi B.N", role: "Faculty Coordinator" },
+  { name: "Dr. Abdul Azeez", role: "Faculty Coordinator" },
+  { name: "Prof. Noor Ayesha", role: "Faculty Coordinator" },
+  { name: "Dr. Hashinur Islam", role: "Faculty Coordinator" },
 ];
 
 export const studentOrganisers: Person[] = [
@@ -75,6 +82,12 @@ export const studentOrganisers: Person[] = [
   { name: "Rehan", role: "Student Organiser", photo: "/team/rehan.webp" },
   { name: "Shaob H Jamadar", role: "Student Organiser", photo: "/team/shaob-h-jamadar.webp" },
   { name: "Mateen U S", role: "Student Organiser", photo: "/team/mateen-u-s.webp" },
+  { name: "Ms. Zaiba", role: "Student Organiser" },
+  { name: "Mr. Mohammed Ikram", role: "Student Organiser" },
+  { name: "Mr. Sai Charan", role: "Student Organiser" },
+  { name: "Ms. Chrysolite", role: "Student Organiser" },
+  { name: "Mr. Mohammed Afnan", role: "Student Organiser" },
+  { name: "Mr. Sakib", role: "Student Organiser" },
 ];
 
 export type Ceremony = {
