@@ -26,10 +26,14 @@ export function Hero() {
             <span className="size-1.5 rounded-full bg-primary animate-pulse" aria-hidden />
             Registrations open · 24-hour hackathon
           </Badge>
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <BrandLogo logo={logos.hkbk} alt={siteConfig.host} className="h-11" />
-            <span className="text-sm text-muted-foreground">in association with</span>
-            <BrandLogo logo={logos.ieeeBangalore} alt={siteConfig.association} className="h-10" />
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-3">
+            <BrandLogo logo={logos.hkbk} alt={siteConfig.host} className="h-9" />
+            <span className="text-xs text-muted-foreground sm:text-sm">in association with</span>
+            <div className="flex items-center gap-3">
+              <BrandLogo logo={logos.ieeeBangalore} alt={siteConfig.association} className="h-8" />
+              <span aria-hidden className="h-7 w-px bg-border" />
+              <BrandLogo logo={logos.ieeeCass} alt="IEEE Circuits and Systems Society" className="h-8" />
+            </div>
           </div>
           <h1 className="text-5xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-6xl lg:text-7xl">
             Nexora{" "}

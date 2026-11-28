@@ -104,3 +104,68 @@ export const rules: { title: string; items: string[] }[] = [
     ],
   },
 ];
+
+/** Track-specific rules, shown on the Rules page below the general rules. */
+export const trackRules: { track: TrackSlug; title: string; sections: { title: string; items: string[] }[] }[] = [
+  {
+    track: "edge-iot",
+    title: "Edge IoT rules",
+    sections: [
+      {
+        title: "Hardware",
+        items: [
+          "Teams may bring their own boards, sensors and modules; list them in your submission.",
+          "Hardware borrowed from the lab must be signed out and returned in working condition before the valedictory.",
+          "Pre-built modules and breakout boards are allowed; the system design and firmware must be built during the event.",
+          "A simulated prototype is accepted if hardware is unavailable, but a physical demo scores higher.",
+        ],
+      },
+      {
+        title: "Safety",
+        items: [
+          "No mains-voltage (230 V) work without an organiser present.",
+          "Soldering only at the designated hardware lab stations.",
+          "LiPo and other batteries must be handled with care and never left charging unattended.",
+        ],
+      },
+      {
+        title: "Demo & judging",
+        items: [
+          "Your solution must run meaningful computation on an edge device, not only in the cloud.",
+          "Show live data from sensors or a recorded data stream during the review.",
+          "Share power, latency or accuracy measurements where they apply.",
+        ],
+      },
+    ],
+  },
+  {
+    track: "cyber-security",
+    title: "Cyber Security rules",
+    sections: [
+      {
+        title: "Ethical conduct",
+        items: [
+          "Test only systems you own or targets provided by the organisers.",
+          "Attacking the venue network, other teams, partners or any third-party system leads to immediate disqualification.",
+          "Do not create, share or run malware outside an isolated environment.",
+        ],
+      },
+      {
+        title: "Data & disclosure",
+        items: [
+          "Use only public, synthetic or organiser-provided datasets; never real personal data.",
+          "Report any real vulnerability you find to the organisers privately — do not publish it.",
+          "All work must comply with Indian law, including the Information Technology Act, 2000.",
+        ],
+      },
+      {
+        title: "Demo & judging",
+        items: [
+          "Present a clear threat model: what you defend, against whom, and how.",
+          "Attack demonstrations must run in a sandbox or on organiser-provided targets.",
+          "Your solution must have a defensive outcome, even if it uses offensive techniques.",
+        ],
+      },
+    ],
+  },
+];

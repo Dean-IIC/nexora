@@ -4,6 +4,7 @@ import { logos } from "@/lib/data/logos";
 import { college } from "@/lib/data/people";
 import { BrandLogo } from "./brand-logo";
 import { siteConfig } from "@/lib/site-config";
+import { cn } from "@/lib/utils";
 import { SectionHeading } from "./section-heading";
 
 export function AboutCollege() {
@@ -24,7 +25,7 @@ export function AboutCollege() {
           </div>
           <dl className="mt-8 grid grid-cols-2 gap-4">
             {college.highlights.map((h) => (
-              <div key={h.label} className="rounded-xl border bg-background/60 p-4">
+              <div key={h.label} className={cn("rounded-xl border bg-background/60 p-4", h.wide && "col-span-2")}>
                 <dt className="text-xs text-muted-foreground">{h.label}</dt>
                 <dd className="mt-1 font-semibold">{h.value}</dd>
               </div>

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 
 import { PageShell, SectionHeading } from "@/components/features/section-heading";
+import { TrackRules } from "@/components/features/track-rules";
 import { Card, CardTitle } from "@/components/ui/card";
 import { rules } from "@/lib/data/content";
 
-export const metadata: Metadata = { title: "Rules & Code of Conduct", description: "Eligibility, building rules, security conduct and judging." };
+export const metadata: Metadata = { title: "Rules & Code of Conduct", description: "General rules plus track-specific rules for Edge IoT and Cyber Security." };
 
 export default function RulesPage() {
   return (
@@ -27,6 +28,14 @@ export default function RulesPage() {
             </ul>
           </Card>
         ))}
+      </div>
+      <div className="space-y-8 pt-8">
+        <SectionHeading
+          eyebrow="Track rules"
+          title="Rules for each track"
+          description="These apply in addition to the general rules above."
+        />
+        <TrackRules />
       </div>
     </PageShell>
   );

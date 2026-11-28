@@ -8,18 +8,18 @@ export type Person = { role: string; name?: string; org?: string; photo?: string
 
 export const college = {
   name: "HKBK College of Engineering",
-  city: "Bengaluru, Karnataka",
-  // TODO: review this copy with the college before publishing widely.
+  city: "Nagawara, Bengaluru",
   summary:
-    "HKBK College of Engineering is an engineering institution in Bengaluru affiliated to Visvesvaraya Technological University (VTU) and approved by AICTE. Its departments include Computer Science & Engineering (CSE), Artificial Intelligence & Machine Learning (AIML), Electronics & Communication Engineering (ECE), Information Science & Engineering (ISE) and Mechanical Engineering (ME).",
+    "Established in 1997, HKBK College of Engineering is part of the HKBK Group of Institutions — HKBK stands for \"Have Knowledge, Be Knowledgeable\". Its 17-acre campus sits opposite Manyata Tech Park in Nagawara, Bengaluru. The college is affiliated to Visvesvaraya Technological University (VTU), Belagavi, approved by AICTE, and offers B.E. programmes in Computer Science & Engineering (CSE), Artificial Intelligence & Machine Learning (AIML), Electronics & Communication Engineering (ECE), Information Science & Engineering (ISE) and Mechanical Engineering (ME).",
   detail:
-    "With active student chapters, research labs and strong industry connections, HKBK encourages students to learn by building. Nexora is the college's flagship hackathon, bringing together students, faculty and industry experts to solve real problems in cyber security and edge computing.",
+    "With NBA-accredited programmes in ECE, CSE and ISE, well-equipped laboratories and a community of 200+ faculty and 10,000+ alumni, HKBK pairs academic rigour with hands-on learning. Nexora is the college's flagship hackathon, bringing students, faculty and industry experts together to solve real problems in cyber security and edge computing.",
   highlights: [
+    { label: "Established", value: "1997" },
+    { label: "Campus", value: "17 acres, Bengaluru" },
     { label: "Affiliation", value: "VTU, Belagavi" },
     { label: "Approval", value: "AICTE" },
-    { label: "Location", value: "Bengaluru" },
-    { label: "Departments", value: "CSE · AIML · ECE · ISE · ME" },
-  ],
+    { label: "Departments", value: "CSE · AIML · ECE · ISE · ME", wide: true },
+  ] as { label: string; value: string; wide?: boolean }[],
 };
 
 export type Department = {
@@ -37,8 +37,8 @@ export const departments: Department[] = [
     short: "AIML",
     name: "Department of Artificial Intelligence & Machine Learning",
     about:
-      "The AIML department trains engineers to design intelligent systems — from data and learning algorithms to secure, responsible deployment. Its students bring machine-learning depth to threat detection, anomaly analysis and on-device intelligence.",
-    focus: ["Machine learning", "Deep learning", "Data analytics", "AI for security"],
+      "Established in 2021–22 with an intake of 60, the Department of Artificial Intelligence & Machine Learning has grown to an intake of 180 in 2025–26. Its B.E. programme covers machine learning, neural networks and natural language processing, with hands-on work in Python, PyTorch, Keras, scikit-learn and spaCy — the skills behind the intelligent threat detection and on-device AI that Nexora's teams build.",
+    focus: ["Machine learning", "Neural networks", "Natural language processing", "AI for security"],
     accent: "cyber",
   },
   {
@@ -46,8 +46,8 @@ export const departments: Department[] = [
     short: "ECE",
     name: "Department of Electronics & Communication Engineering",
     about:
-      "The ECE department covers embedded systems, VLSI, communication and signal processing — the hardware foundations of every edge device. Its labs and faculty anchor the hands-on side of Nexora's Edge IoT track.",
-    focus: ["Embedded systems", "IoT", "VLSI", "Wireless communication"],
+      "Established in 1997 with an intake of 45, the Department of Electronics & Communication Engineering now admits 180 students a year, and its B.E. programme is NBA-accredited till 2026. Its 35+ faculty bring expertise in VLSI and embedded systems, digital communication, signal processing, computer networks and nanoelectronics, backed by labs running MATLAB, LabVIEW, Cadence, Xilinx and Keil — the hardware foundations of Nexora's Edge IoT track.",
+    focus: ["Embedded systems", "VLSI", "Internet of Things", "Wireless communication", "Signal processing"],
     accent: "iot",
   },
 ];
@@ -62,9 +62,12 @@ export const leaders: Person[] = [
 ];
 
 export const facultyOrganisers: Person[] = [
-  { name: "Prof. Afreen", role: "Faculty Coordinator", photo: "/team/prof-afreen.webp" },
-  { name: "Prof. Nelvita", role: "Faculty Coordinator", photo: "/team/prof-nelvita.webp" },
-  { name: "Prof. Saroja", role: "Faculty Coordinator", photo: "/team/prof-saroja.webp" },
+  { name: "Prof. Afreen", role: "Faculty Organiser", photo: "/team/prof-afreen.webp" },
+  { name: "Prof. Nelvita", role: "Faculty Organiser", photo: "/team/prof-nelvita.webp" },
+  { name: "Prof. Saroja", role: "Faculty Organiser", photo: "/team/prof-saroja.webp" },
+];
+
+export const facultyCoordinators: Person[] = [
   { name: "Prof. Aushij Singh", role: "Faculty Coordinator", photo: "/team/prof-aushij-singh.webp" },
   { name: "Prof. Arun Kumar", role: "Faculty Coordinator", photo: "/team/prof-arun-kumar.webp" },
   { name: "Prof. Nabeel Baig", role: "Faculty Coordinator", photo: "/team/prof-nabeel-baig.webp" },
@@ -80,7 +83,7 @@ export const studentOrganisers: Person[] = [
   { name: "Mr. Shoaib H Jamadar", role: "Student Organiser", photo: "/team/shoaib-h-jamadar.webp" },
   { name: "Mr. Mateen U S", role: "Student Organiser", photo: "/team/mateen-u-s.webp" },
   { name: "Ms. Zaiba", role: "Student Organiser" },
-  { name: "Mr. Mohammed Ikram", role: "Student Organiser" },
+  { name: "Mr. Mohammed Ikram", role: "Student Organiser", photo: "/team/mohammed-ikram.webp" },
   { name: "Mr. Sai Charan", role: "Student Organiser" },
   { name: "Ms. Chrysolite", role: "Student Organiser" },
   { name: "Mr. Mohammed Afnan", role: "Student Organiser" },
@@ -98,24 +101,37 @@ export const volunteers: Person[] = [
   { name: "Syed Fatir Arman", role: "Coordinator", photo: "/team/syed-fatir-arman.webp" },
   { name: "Rubina Mehreen", role: "Coordinator", photo: "/team/rubina-mehreen.webp" },
   { name: "Arham A K", role: "Coordinator", photo: "/team/arham-a-k.webp" },
-  { name: "MD Musaib", role: "Coordinator" },
+  { name: "MD Musaib", role: "Coordinator", photo: "/team/md-musaib.webp" },
   { name: "Saud Zanjani", role: "Coordinator", photo: "/team/saud-zanjani.webp" },
   { name: "Ayman Mohammedi", role: "Coordinator", photo: "/team/ayman-mohammedi.webp" },
   { name: "Deepankar Maji", role: "Coordinator" },
   { name: "Chetan IS", role: "Coordinator", photo: "/team/chetan-is.webp" },
   { name: "MD Sabir", role: "Coordinator", photo: "/team/md-sabir.webp" },
-  { name: "MD Omeir", role: "Coordinator" },
+  { name: "MD Omeir", role: "Coordinator", photo: "/team/md-omeir.webp" },
   { name: "Sagar H D", role: "Coordinator", photo: "/team/sagar-h-d.webp" },
   { name: "Rakesh M", role: "Coordinator", photo: "/team/rakesh-m.webp" },
-  { name: "Sandeep N Goudar", role: "Coordinator" },
-  { name: "Shashank", role: "Coordinator" },
+  { name: "Sandeep N Goudar", role: "Coordinator", photo: "/team/sandeep-n-goudar.webp" },
+  { name: "Shashank", role: "Coordinator", photo: "/team/shashank.webp" },
   { name: "Rutik Bhandare", role: "Coordinator", photo: "/team/rutik-bhandare.webp" },
   { name: "S J Pavan Rao", role: "Coordinator", photo: "/team/s-j-pavan-rao.webp" },
-  { name: "Akifa Ghouse", role: "Coordinator" },
+  { name: "Akifa Ghouse", role: "Coordinator", photo: "/team/akifa-ghouse.webp" },
   { name: "Sharat O", role: "Coordinator", photo: "/team/sharat-o.webp" },
   { name: "Maera Shams", role: "Coordinator" },
   { name: "MD Maaz", role: "Coordinator" },
   { name: "MD Luqman", role: "Coordinator" },
+  { name: "Anusha", role: "ECE · 5th Sem" },
+  { name: "Mohammed Bilal", role: "ECE · 5th Sem" },
+  { name: "Mamatha", role: "ECE · 5th Sem" },
+  { name: "Karpaswamy", role: "ECE · 5th Sem" },
+  { name: "Mubasshira", role: "ECE · 5th Sem" },
+  { name: "Jayesh", role: "ECE · 5th Sem" },
+  { name: "Gagan", role: "ECE · 5th Sem" },
+  { name: "Rohith", role: "ECE · 5th Sem" },
+  { name: "Shaistha", role: "ECE · 3rd Sem" },
+  { name: "Nisha", role: "ECE · 3rd Sem" },
+  { name: "Munavvara", role: "ECE · 3rd Sem" },
+  { name: "Poorvika", role: "ECE · 3rd Sem" },
+  { name: "Munazza", role: "ECE · 3rd Sem" },
 ];
 
 export type Ceremony = {
