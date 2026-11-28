@@ -66,7 +66,7 @@ export default function AboutPage() {
       <AboutCollege />
       {aiml && <HodSpotlight department={aiml} eyebrow="About the department" />}
       {ece && <HodSpotlight department={ece} eyebrow="About the department" reverse />}
-      <MeetTheTeam />
+      <MeetTheTeam showVolunteers />
       <Ceremonies />
       <CtaBand />
     </>

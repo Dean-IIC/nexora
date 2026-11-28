@@ -90,6 +90,13 @@ export const studentOrganisers: Person[] = [
   { name: "Mr. Sakib", role: "Student Organiser" },
 ];
 
+/**
+ * Volunteers — shown on the About page below the student organisers.
+ * The section stays hidden while this list is empty.
+ * Example: { name: "Mr. Firstname Lastname", role: "Volunteer" }
+ */
+export const volunteers: Person[] = [];
+
 export type Ceremony = {
   id: string;
   title: string;
