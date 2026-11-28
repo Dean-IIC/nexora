@@ -94,7 +94,7 @@ export const studentOrganisers: Person[] = [
   { name: "Mr. Rehan", role: "Student Organiser", photo: "/team/rehan.webp" },
   { name: "Mr. Shoaib H Jamadar", role: "Student Organiser", photo: "/team/shoaib-h-jamadar.webp" },
   { name: "Mr. Mateen U S", role: "Student Organiser", photo: "/team/mateen-u-s.webp" },
-  { name: "Ms. Ziya Fathima", role: "Student Organiser" },
+  { name: "Ms. Ziya Fathima", role: "Student Organiser", photo: "/team/ziyafatima-mallur.webp" },
   { name: "Mr. Mohammed Ikram", role: "Student Organiser", photo: "/team/mohammed-ikram.webp" },
   { name: "Mr. Sai Charan", role: "Student Organiser" },
   { name: "Ms. Chrysolite", role: "Student Organiser" },
@@ -108,7 +108,6 @@ export const studentOrganisers: Person[] = [
  * Photos: add `photo: "/team/<file>.webp"` to an entry.
  */
 export const volunteers: Person[] = [
-  { name: "Ziyafatima Mallur", role: "Student Coordinator", photo: "/team/ziyafatima-mallur.webp" },
   { name: "Syed Mutammur Abbas", role: "Student Coordinator", photo: "/team/syed-mutammur-abbas.webp" },
   { name: "Syed Fatir Arman", role: "Student Coordinator", photo: "/team/syed-fatir-arman.webp" },
   { name: "Rubina Mehreen", role: "Student Coordinator", photo: "/team/rubina-mehreen.webp" },
