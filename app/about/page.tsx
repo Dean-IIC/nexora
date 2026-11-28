@@ -7,7 +7,7 @@ import { CtaBand } from "@/components/features/cta-band";
 import { HeroGraphic } from "@/components/features/graphics/hero-graphic";
 import { HodSpotlight } from "@/components/features/hod-spotlight";
 import { PageShell, SectionHeading } from "@/components/features/section-heading";
-import { MeetTheTeam } from "@/components/features/team-sections";
+import { Organisers, OurLeaders } from "@/components/features/team-sections";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { departments } from "@/lib/data/people";
 import { siteConfig } from "@/lib/site-config";
@@ -24,7 +24,7 @@ const pillars = [
   { Icon: Lightbulb, title: "Real problems", text: "Problem statements come from real deployments — grids, farms, factories and SOCs." },
 ];
 
-/** About page order: Nexora 2.0 → HKBK → AIML dept → ECE dept → leaders → organisers → ceremonies. */
+/** About page order: Nexora 2.0 → HKBK → our leaders → AIML dept → ECE dept → organisers → volunteers → ceremonies. */
 export default function AboutPage() {
   const aiml = departments.find((d) => d.id === "aiml");
   const ece = departments.find((d) => d.id === "ece");
@@ -64,9 +64,10 @@ export default function AboutPage() {
         </div>
       </PageShell>
       <AboutCollege />
+      <OurLeaders id="team" />
       {aiml && <HodSpotlight department={aiml} eyebrow="About the department" />}
       {ece && <HodSpotlight department={ece} eyebrow="About the department" reverse />}
-      <MeetTheTeam showVolunteers />
+      <Organisers showVolunteers />
       <Ceremonies />
       <CtaBand />
     </>

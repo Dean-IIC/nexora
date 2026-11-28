@@ -34,13 +34,10 @@ function PeopleGroup({
   );
 }
 
-/**
- * Meet the team: leaders, faculty organisers and student organisers.
- * `showVolunteers` adds the volunteers group (used on the About page); it renders only when names exist.
- */
-export function MeetTheTeam({ showVolunteers = false }: { showVolunteers?: boolean }) {
+/** "Our leaders" — the HKBK leadership grid. */
+export function OurLeaders({ id = "leaders" }: { id?: string }) {
   return (
-    <section id="team" aria-label="Meet the team" className="mx-auto max-w-7xl scroll-mt-24 space-y-20 px-4 py-24 sm:px-6">
+    <section id={id} aria-labelledby="leaders-title" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-24 sm:px-6">
       <PeopleGroup
         id="leaders-title"
         eyebrow="Meet the team"
@@ -49,6 +46,14 @@ export function MeetTheTeam({ showVolunteers = false }: { showVolunteers?: boole
         people={leaders}
         cols="sm:grid-cols-3 lg:grid-cols-5"
       />
+    </section>
+  );
+}
+
+/** Faculty organisers, student organisers and (optionally) volunteers. */
+export function Organisers({ showVolunteers = false }: { showVolunteers?: boolean }) {
+  return (
+    <section id="organisers" aria-label="Organising team" className="mx-auto max-w-7xl scroll-mt-24 space-y-20 px-4 py-24 sm:px-6">
       <PeopleGroup
         id="faculty-title"
         eyebrow="Organising team"
@@ -76,5 +81,15 @@ export function MeetTheTeam({ showVolunteers = false }: { showVolunteers?: boole
         />
       )}
     </section>
+  );
+}
+
+/** Leaders followed by the organising team (used on the home page). */
+export function MeetTheTeam() {
+  return (
+    <div id="team">
+      <OurLeaders id="our-leaders" />
+      <Organisers />
+    </div>
   );
 }
