@@ -98,7 +98,7 @@ export const studentOrganisers: Person[] = [
   { name: "Mr. Sai Charan", role: "Student Organiser" },
   { name: "Ms. Chrysolite", role: "Student Organiser" },
   { name: "Mr. Mohammed Afnan", role: "Student Organiser" },
-  { name: "Mr. Sakib", role: "Student Organiser" },
+  { name: "Mr. Sakib", role: "Student Organiser", photo: "/team/sakib.webp" },
 ];
 
 /**
@@ -132,7 +132,7 @@ export const volunteers: Person[] = [
   { name: "MD Luqman", role: "Student Coordinator" },
   { name: "Anusha", role: "Student Coordinator" },
   { name: "Mohammed Bilal", role: "Student Coordinator" },
-  { name: "Mamatha", role: "Student Coordinator" },
+  { name: "Mamatha", role: "Student Coordinator", photo: "/team/mamatha.webp" },
   { name: "Karpaswamy", role: "Student Coordinator" },
   { name: "Mubasshira", role: "Student Coordinator" },
   { name: "Jayesh", role: "Student Coordinator" },
