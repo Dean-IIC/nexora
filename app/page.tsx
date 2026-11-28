@@ -7,7 +7,7 @@ import { Milestones } from "@/components/features/milestones";
 import { PartnerStrip } from "@/components/features/partner-strip";
 import { SectionHeading } from "@/components/features/section-heading";
 import { StatsStrip } from "@/components/features/stats-strip";
-import { MeetTheTeam } from "@/components/features/team-sections";
+import { Organisers, OurLeaders } from "@/components/features/team-sections";
 import { TrackCard } from "@/components/features/track-card";
 import { departments } from "@/lib/data/people";
 import { tracks } from "@/lib/data/tracks";
@@ -21,6 +21,7 @@ export default function HomePage() {
       <Hero />
       <StatsStrip />
       <AboutCollege />
+      <OurLeaders id="team" />
       {aiml && <HodSpotlight department={aiml} />}
       {ece && <HodSpotlight department={ece} reverse />}
       <Ceremonies />
@@ -38,7 +39,7 @@ export default function HomePage() {
         <SectionHeading eyebrow="Timeline" title={<span id="timeline-heading">Key dates</span>} />
         <Milestones />
       </section>
-      <MeetTheTeam />
+      <Organisers />
       <PartnerStrip />
       <CtaBand />
     </>

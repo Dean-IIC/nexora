@@ -136,15 +136,15 @@ export type Ceremony = {
 export const ceremonies: Ceremony[] = [
   {
     id: "inauguration",
-    title: "Inauguration & Pre-hackathon Talk",
+    title: "Pre-hackathon Talk & Inauguration",
     date: "Fri, 11 December 2026",
-    time: "09:00 AM – 12:00 PM IST",
+    time: "10:00 AM – 1:30 PM IST",
     sessions: [
-      { label: "Inauguration", time: "09:00 – 10:00 AM" }, // TODO: confirm
-      { label: "Pre-hackathon talk", time: "10:00 AM – 12:00 PM" },
+      { label: "Pre-hackathon talk (Cyber Security)", time: "10:00 AM – 12:00 PM" },
+      { label: "Inauguration", time: "1:00 – 1:30 PM" },
     ],
     description:
-      "The opening ceremony launches Nexora 2.0, followed by a 2-hour pre-hackathon talk by our chief guest to set the stage before hacking begins.",
+      "Our chief guest opens Nexora 2.0 with a 2-hour pre-hackathon talk on cyber security, followed by the inauguration after lunch.",
     chiefGuest: {
       name: "Altaf Balsing",
       role: "Co-founder, DEFSEC Systems and Security Pvt. Ltd.",
@@ -157,7 +157,7 @@ export const ceremonies: Ceremony[] = [
     id: "valedictory",
     title: "Valedictory",
     date: "Sat, 12 December 2026",
-    time: "04:30 PM IST", // TODO: confirm
+    time: "12:30 – 1:00 PM IST",
     description: "Closing ceremony, winner announcements and prize distribution.",
     chiefGuest: { role: "Chief Guest — to be announced" }, // TODO: add valedictory chief guest
     accent: "primary",

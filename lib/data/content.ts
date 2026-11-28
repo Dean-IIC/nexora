@@ -41,8 +41,8 @@ export const partners: Partner[] = [
 ];
 
 export const prizes = {
-  pool: "₹75,000",
-  poolShort: "₹75K",
+  pool: "₹70,000",
+  poolShort: "₹70,000",
   positions: ["Winner", "1st Runner-up", "2nd Runner-up"],
   certificates: [
     { title: "Winner's certificate", text: "Awarded to every member of the winning teams." },

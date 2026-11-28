@@ -18,9 +18,9 @@ export const siteConfig = {
     (process.env.VERCEL_PROJECT_PRODUCTION_URL
       ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
       : "http://localhost:3000"),
-  // Inauguration 09:00 IST on 11 Dec 2026 (TODO: confirm time); valedictory ends ~17:30 IST on 12 Dec.
+  // Registration opens 09:00 IST on 11 Dec 2026; valedictory ends 13:00 IST on 12 Dec.
   startsAt: "2026-12-11T09:00:00+05:30",
-  endsAt: "2026-12-12T17:30:00+05:30",
+  endsAt: "2026-12-12T13:00:00+05:30",
   dateLabel: "11 – 12 December 2026",
   registrationDeadline: "2026-12-05T23:59:00+05:30", // TODO: confirm
   registrationDeadlineLabel: "5 December 2026, 11:59 PM IST", // TODO: confirm

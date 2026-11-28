@@ -69,7 +69,7 @@ export function Ceremonies() {
       <SectionHeading
         eyebrow="Ceremonies & chief guests"
         title={<span id="ceremonies-title">Inauguration to valedictory</span>}
-        description="Nexora 2.0 opens on 11 December with the inauguration and a 2-hour pre-hackathon talk by our chief guest, and closes with the valedictory on 12 December."
+        description="Nexora 2.0 opens on 11 December with a 2-hour pre-hackathon talk on cyber security and the inauguration, and closes with the valedictory on 12 December."
       />
       <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
         {ceremonies.map((c) => <CeremonyCard key={c.id} c={c} />)}

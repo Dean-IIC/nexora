@@ -27,6 +27,7 @@ function TrackTag({ track }: { track: ScheduleItem["track"] }) {
 
 export function ScheduleView({ days }: { days: ScheduleDay[] }) {
   const [filter, setFilter] = useState<ScheduleTrack>("all");
+  const hasTrackItems = days.some((d) => d.items.some((i) => i.track !== "all"));
 
   return (
     <Tabs defaultValue={days[0]?.id} className="w-full">
@@ -38,6 +39,7 @@ export function ScheduleView({ days }: { days: ScheduleDay[] }) {
             </TabsTrigger>
           ))}
         </TabsList>
+        {hasTrackItems && (
         <div role="group" aria-label="Filter by track" className="flex flex-wrap gap-1">
           {filters.map((f) => (
             <button
@@ -54,6 +56,7 @@ export function ScheduleView({ days }: { days: ScheduleDay[] }) {
             </button>
           ))}
         </div>
+        )}
       </div>
       {days.map((d) => {
         const items = d.items.filter((i) => filter === "all" || i.track === "all" || i.track === filter);
@@ -66,7 +69,7 @@ export function ScheduleView({ days }: { days: ScheduleDay[] }) {
                   <li key={`${item.time}-${item.title}`} className="relative">
                     <span aria-hidden className="absolute top-4 -left-[33px] grid size-4 place-items-center rounded-full border-2 border-primary bg-background" />
                     <div className="flex flex-col gap-2 rounded-xl border bg-card p-4 backdrop-blur sm:flex-row sm:items-center sm:gap-6">
-                      <time className="w-14 shrink-0 font-mono text-sm font-semibold text-primary">{item.time}</time>
+                      <time className="shrink-0 font-mono text-sm font-semibold text-primary sm:w-44">{item.time}</time>
                       <div className="flex flex-1 items-start gap-3">
                         <Icon className="mt-0.5 size-4 shrink-0 text-muted-foreground" aria-hidden />
                         <div>

@@ -13,8 +13,8 @@ export default function SchedulePage() {
       <SectionHeading
         as="h1"
         eyebrow="Schedule"
-        title="24 hours, minute by minute"
-        description="All times are IST. Track-specific sessions are tagged — filter to see just your track."
+        title="Two days, hour by hour"
+        description="All times are IST."
       />
       <ScheduleView days={schedule} />
       <section aria-labelledby="road" className="space-y-10 pt-8">

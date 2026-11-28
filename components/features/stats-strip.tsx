@@ -2,7 +2,7 @@ const stats = [
   { value: "24", unit: "hrs", label: "Non-stop building" },
   { value: "2", unit: "tracks", label: "Edge IoT & Cyber Security" },
   { value: "12", unit: "problems", label: "Curated by partners" },
-  { value: "₹75K", unit: "", label: "Total prize pool" },
+  { value: "₹70,000", unit: "", label: "Total prize pool" },
 ];
 
 export function StatsStrip() {

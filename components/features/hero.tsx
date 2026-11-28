@@ -61,7 +61,7 @@ export function Hero() {
             </Button>
           </div>
           <div className="pt-2">
-            <p className="mb-2 font-mono text-xs tracking-widest text-muted-foreground uppercase">Hacking starts in</p>
+            <p className="mb-2 font-mono text-xs tracking-widest text-muted-foreground uppercase">Nexora 2.0 starts in</p>
             <Countdown target={siteConfig.startsAt} />
           </div>
         </div>
