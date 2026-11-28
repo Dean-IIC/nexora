@@ -12,7 +12,7 @@ function PeopleGroup({
   itemClassName,
 }: {
   id: string;
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   description?: string;
   people: Person[];
@@ -40,7 +40,6 @@ export function OurLeaders({ id = "leaders" }: { id?: string }) {
     <section id={id} aria-labelledby="leaders-title" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-24 sm:px-6">
       <PeopleGroup
         id="leaders-title"
-        eyebrow="Meet the team"
         title="Our leaders"
         description="The leaders of HKBK who make Nexora 2.0 possible."
         people={leaders}
