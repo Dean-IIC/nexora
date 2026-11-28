@@ -19,7 +19,6 @@ export function SectionHeading({
     <div className={cn("flex flex-col gap-3", align === "center" && "mx-auto items-center text-center", "max-w-3xl", className)}>
       {eyebrow && (
         <p className="font-mono text-xs tracking-[0.25em] text-primary uppercase">
-          <span aria-hidden>{"// "}</span>
           {eyebrow}
         </p>
       )}

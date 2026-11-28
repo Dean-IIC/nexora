@@ -34,7 +34,7 @@ export function HodSpotlight({
 
         <div className="space-y-5">
           <p className={cn("font-mono text-xs tracking-[0.25em] uppercase", isIoT ? "text-iot" : "text-cyber")}>
-            <span aria-hidden>{"// "}</span>{eyebrow} · {d.short}
+            {eyebrow} · {d.short}
           </p>
           <h2 id={titleId} className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">{d.name}</h2>
           {d.hod.bio && (
