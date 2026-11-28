@@ -71,10 +71,21 @@ export const facultyCoordinators: Person[] = [
   { name: "Prof. Aushij Singh", role: "Faculty Coordinator", photo: "/team/prof-aushij-singh.webp" },
   { name: "Prof. Arun Kumar", role: "Faculty Coordinator", photo: "/team/prof-arun-kumar.webp" },
   { name: "Prof. Nabeel Baig", role: "Faculty Coordinator", photo: "/team/prof-nabeel-baig.webp" },
-  { name: "Dr. Aryalekshmi B.N", role: "Faculty Coordinator" },
-  { name: "Dr. Abdul Azeez", role: "Faculty Coordinator" },
-  { name: "Prof. Noor Ayesha", role: "Faculty Coordinator" },
-  { name: "Dr. Hashinur Islam", role: "Faculty Coordinator" },
+  { name: "Dr. Maaz Ahmed", role: "Faculty Coordinator · ECE", photo: "/team/dr-maaz-ahmed.webp" },
+  { name: "Dr. Abdul Azeez", role: "Faculty Coordinator · ECE", photo: "/team/dr-abdul-azeez.webp" },
+  { name: "Dr. Aryalekshmi B N", role: "Faculty Coordinator · ECE", photo: "/team/dr-aryalekshmi-b-n.webp" },
+  { name: "Prof. Noor Ayesha", role: "Faculty Coordinator · ECE", photo: "/team/prof-noor-ayesha.webp" },
+  { name: "Prof. Thiruppathiraja M", role: "Faculty Coordinator · ECE", photo: "/team/prof-thiruppathiraja-m.webp" },
+  { name: "Prof. Anees Fathima", role: "Faculty Coordinator · ECE", photo: "/team/prof-anees-fathima.webp" },
+  { name: "Prof. Yousuf Madar R", role: "Faculty Coordinator · ECE", photo: "/team/prof-yousuf-madar-r.webp" },
+  { name: "Prof. Lakshmi Devi D", role: "Faculty Coordinator · ECE", photo: "/team/prof-lakshmi-devi-d.webp" },
+  { name: "Prof. Summaiya Almas", role: "Faculty Coordinator · ECE", photo: "/team/prof-summaiya-almas.webp" },
+  { name: "Dr. Hashinur Islam", role: "Faculty Coordinator · ECE", photo: "/team/dr-hashinur-islam.webp" },
+  { name: "Dr. Babu Chinta", role: "Faculty Coordinator · ECE", photo: "/team/dr-babu-chinta.webp" },
+  { name: "Prof. Nisha Anie Alexander", role: "Faculty Coordinator · ECE", photo: "/team/prof-nisha-anie-alexander.webp" },
+  { name: "Dr. A. Elakkiya", role: "Faculty Coordinator · ECE", photo: "/team/dr-a-elakkiya.webp" },
+  { name: "Prof. Rohini", role: "Faculty Coordinator · ECE" },
+  { name: "Prof. Padma Priya V", role: "Faculty Coordinator · ECE", photo: "/team/prof-padma-priya-v.webp" },
 ];
 
 export const studentOrganisers: Person[] = [
@@ -159,9 +170,8 @@ export const ceremonies: Ceremony[] = [
     description:
       "Our chief guest opens Nexora 2.0 with a 2-hour pre-hackathon talk on cyber security, followed by the inauguration after lunch.",
     chiefGuest: {
-      name: "Altaf Balsing",
-      role: "Co-founder, DEFSEC Systems and Security Pvt. Ltd.",
-      org: "Cyber Security Expert, Cisco",
+      name: "Mr. Altaf Balsing",
+      role: "Founder and CEO, DEFSEC Pvt. Ltd.",
       photo: "/team/altaf-balsing.webp",
     },
     accent: "cyber",

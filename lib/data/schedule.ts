@@ -17,7 +17,7 @@ export const schedule: ScheduleDay[] = [
     date: "Fri, 11 Dec 2026",
     items: [
       { time: "9:00 – 10:00 AM", title: "Registration", detail: "Bring your college ID and registration confirmation.", track: "all", kind: "ceremony" },
-      { time: "10:00 AM – 12:00 PM", title: "Pre-Hackathon Talk (Cyber Security)", detail: "By chief guest Altaf Balsing.", track: "all", kind: "talk" },
+      { time: "10:00 AM – 12:00 PM", title: "Pre-Hackathon Talk (Cyber Security)", detail: "By chief guest Mr. Altaf Balsing, Founder and CEO, DEFSEC Pvt. Ltd.", track: "all", kind: "talk" },
       { time: "12:00 – 1:00 PM", title: "Lunch Break", track: "all", kind: "break" },
       { time: "1:00 – 1:30 PM", title: "Inauguration", track: "all", kind: "ceremony" },
       { time: "5:00 – 5:30 PM", title: "Phase-1 Review & Tea Break", track: "all", kind: "judging" },
