@@ -93,15 +93,41 @@ export const studentOrganisers: Person[] = [
 /**
  * Volunteers — shown on the About page below the student organisers.
  * The section stays hidden while this list is empty.
- * Example: { name: "Mr. Firstname Lastname", role: "Volunteer" }
+ * Photos: add `photo: "/team/<file>.webp"` to an entry.
  */
-export const volunteers: Person[] = [];
+export const volunteers: Person[] = [
+  { name: "Ziyafatima Mallur", role: "Coordinator" },
+  { name: "Syed Mutammur Abbas", role: "Coordinator" },
+  { name: "Syed Fatir Arman", role: "Coordinator" },
+  { name: "Rubina Mehreen", role: "Coordinator" },
+  { name: "Arham A K", role: "Coordinator" },
+  { name: "MD Musaib", role: "Coordinator" },
+  { name: "Saud Zanjani", role: "Coordinator" },
+  { name: "Ayman Mohammedi", role: "Coordinator" },
+  { name: "Deepankar Maji", role: "Coordinator" },
+  { name: "Chetan IS", role: "Coordinator" },
+  { name: "MD Sabir", role: "Coordinator" },
+  { name: "MD Omeir", role: "Coordinator" },
+  { name: "Sagar H D", role: "Coordinator" },
+  { name: "Rakesh M", role: "Coordinator" },
+  { name: "Sandeep N Goudar", role: "Coordinator" },
+  { name: "Shashank", role: "Coordinator" },
+  { name: "Rutik Bhandare", role: "Coordinator" },
+  { name: "S J Pavan Rao", role: "Coordinator" },
+  { name: "Akifa Ghouse", role: "Coordinator" },
+  { name: "Sharat O", role: "Coordinator" },
+  { name: "Maera Shams", role: "Coordinator" },
+  { name: "MD Maaz", role: "Coordinator" },
+  { name: "MD Luqman", role: "Coordinator" },
+];
 
 export type Ceremony = {
   id: string;
   title: string;
   date: string;
   time: string;
+  /** Optional breakdown shown instead of `time`, e.g. inauguration + talk. */
+  sessions?: { label: string; time: string }[];
   description: string;
   chiefGuest?: Person;
   accent: "iot" | "cyber" | "primary";
@@ -110,10 +136,15 @@ export type Ceremony = {
 export const ceremonies: Ceremony[] = [
   {
     id: "inauguration",
-    title: "Inauguration",
+    title: "Inauguration & Pre-hackathon Talk",
     date: "Fri, 11 December 2026",
-    time: "09:00 – 10:00 AM IST", // TODO: confirm
-    description: "Opening ceremony, welcome address and launch of Nexora 2.0.",
+    time: "09:00 AM – 12:00 PM IST",
+    sessions: [
+      { label: "Inauguration", time: "09:00 – 10:00 AM" }, // TODO: confirm
+      { label: "Pre-hackathon talk", time: "10:00 AM – 12:00 PM" },
+    ],
+    description:
+      "The opening ceremony launches Nexora 2.0, followed by a 2-hour pre-hackathon talk by our chief guest to set the stage before hacking begins.",
     chiefGuest: {
       name: "Altaf Balsing",
       role: "Co-founder, DEFSEC Systems and Security Pvt. Ltd.",
@@ -121,14 +152,6 @@ export const ceremonies: Ceremony[] = [
       photo: "/team/altaf-balsing.webp",
     },
     accent: "cyber",
-  },
-  {
-    id: "pre-hackathon-talk",
-    title: "Pre-hackathon Talk",
-    date: "Fri, 11 December 2026",
-    time: "10:00 AM – 12:00 PM IST",
-    description: "A 2-hour expert session to set the stage before hacking begins — open to all participants.",
-    accent: "iot",
   },
   {
     id: "valedictory",

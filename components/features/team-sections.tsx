@@ -2,13 +2,30 @@ import { facultyOrganisers, leaders, studentOrganisers, volunteers, type Person 
 import { PersonCard } from "./person-card";
 import { SectionHeading } from "./section-heading";
 
-function PeopleGroup({ id, eyebrow, title, description, people, cols }: { id: string; eyebrow: string; title: string; description?: string; people: Person[]; cols: string }) {
+function PeopleGroup({
+  id,
+  eyebrow,
+  title,
+  description,
+  people,
+  cols,
+  itemClassName,
+}: {
+  id: string;
+  eyebrow: string;
+  title: string;
+  description?: string;
+  people: Person[];
+  /** Grid column classes, or a flex layout when `itemClassName` sets item widths. */
+  cols: string;
+  itemClassName?: string;
+}) {
   return (
     <div className="space-y-8">
       <SectionHeading as="h2" eyebrow={eyebrow} title={<span id={id}>{title}</span>} description={description} />
-      <ul aria-labelledby={id} className={`grid grid-cols-2 gap-4 ${cols}`}>
+      <ul aria-labelledby={id} className={itemClassName ? cols : `grid grid-cols-2 gap-4 ${cols}`}>
         {people.map((p) => (
-          <li key={`${p.role}-${p.name ?? ""}-${p.org ?? ""}`}>
+          <li key={`${p.role}-${p.name ?? ""}-${p.org ?? ""}`} className={itemClassName}>
             <PersonCard person={p} />
           </li>
         ))}
@@ -54,7 +71,8 @@ export function MeetTheTeam({ showVolunteers = false }: { showVolunteers?: boole
           title="Our volunteers"
           description="The volunteers who keep Nexora 2.0 running smoothly."
           people={volunteers}
-          cols="sm:grid-cols-4 lg:grid-cols-6"
+          cols="flex flex-wrap justify-center gap-4"
+          itemClassName="w-[calc(50%-0.5rem)] sm:w-[calc(25%-0.75rem)] lg:w-[calc((100%-5rem)/6)]"
         />
       )}
     </section>

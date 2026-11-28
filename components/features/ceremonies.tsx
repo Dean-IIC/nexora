@@ -11,7 +11,7 @@ const style = {
   primary: { border: "hover:border-primary/50", text: "text-primary", glow: "bg-primary/15" },
 } as const;
 
-const icon = { inauguration: Sparkles, "pre-hackathon-talk": Mic, valedictory: Trophy } as Record<string, typeof Sparkles>;
+const icon = { inauguration: Mic, valedictory: Trophy } as Record<string, typeof Sparkles>;
 
 function CeremonyCard({ c }: { c: Ceremony }) {
   const s = style[c.accent];
@@ -30,17 +30,29 @@ function CeremonyCard({ c }: { c: Ceremony }) {
           <dt><CalendarDays className="size-4 text-muted-foreground" aria-label="Date" /></dt>
           <dd className="font-medium">{c.date}</dd>
         </div>
-        <div className="flex items-center gap-2">
-          <dt><Clock className="size-4 text-muted-foreground" aria-label="Time" /></dt>
-          <dd className={cn("font-mono font-medium", s.text)}>{c.time}</dd>
-        </div>
+        {c.sessions ? (
+          c.sessions.map((sess) => (
+            <div key={sess.label} className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
+              <dt className="flex items-center gap-2">
+                <Clock className="size-4 text-muted-foreground" aria-hidden />
+                <span className="font-medium">{sess.label}</span>
+              </dt>
+              <dd className={cn("font-mono font-medium", s.text)}>{sess.time}</dd>
+            </div>
+          ))
+        ) : (
+          <div className="flex items-center gap-2">
+            <dt><Clock className="size-4 text-muted-foreground" aria-label="Time" /></dt>
+            <dd className={cn("font-mono font-medium", s.text)}>{c.time}</dd>
+          </div>
+        )}
       </dl>
       <p className="text-sm text-muted-foreground">{c.description}</p>
       {c.chiefGuest && (
         <div className="mt-auto flex items-center gap-4 rounded-xl border bg-background/60 p-4">
           <Avatar person={c.chiefGuest} size="md" />
           <div>
-            <p className="font-mono text-[10px] tracking-widest text-muted-foreground uppercase">Chief Guest</p>
+            <p className="font-mono text-[10px] tracking-widest text-muted-foreground uppercase">{c.sessions ? "Chief Guest & Speaker" : "Chief Guest"}</p>
             <p className="font-semibold">{guestNamed ? c.chiefGuest.name : "To be announced"}</p>
             {guestNamed && <p className="text-sm text-foreground/90">{c.chiefGuest.role}</p>}
             {guestNamed && c.chiefGuest.org && <p className="text-xs text-muted-foreground">{c.chiefGuest.org}</p>}
@@ -57,9 +69,9 @@ export function Ceremonies() {
       <SectionHeading
         eyebrow="Ceremonies & chief guests"
         title={<span id="ceremonies-title">Inauguration to valedictory</span>}
-        description="The hackathon opens with the inauguration and a 2-hour pre-hackathon talk on 11 December, and closes with the valedictory on 12 December."
+        description="Nexora 2.0 opens on 11 December with the inauguration and a 2-hour pre-hackathon talk by our chief guest, and closes with the valedictory on 12 December."
       />
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
         {ceremonies.map((c) => <CeremonyCard key={c.id} c={c} />)}
       </div>
     </section>
