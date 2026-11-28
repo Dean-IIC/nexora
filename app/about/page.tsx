@@ -5,7 +5,7 @@ import { AboutCollege } from "@/components/features/about-college";
 import { Ceremonies } from "@/components/features/ceremonies";
 import { CtaBand } from "@/components/features/cta-band";
 import { HeroGraphic } from "@/components/features/graphics/hero-graphic";
-import { HodSpotlight } from "@/components/features/hod-spotlight";
+import { DepartmentSection } from "@/components/features/department-section";
 import { PageShell, SectionHeading } from "@/components/features/section-heading";
 import { Organisers, OurLeaders } from "@/components/features/team-sections";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
@@ -65,8 +65,8 @@ export default function AboutPage() {
       </PageShell>
       <AboutCollege />
       <OurLeaders id="team" />
-      {aiml && <HodSpotlight department={aiml} eyebrow="About the department" />}
-      {ece && <HodSpotlight department={ece} eyebrow="About the department" reverse />}
+      {aiml && <DepartmentSection department={aiml} />}
+      {ece && <DepartmentSection department={ece} reverse />}
       <Organisers showVolunteers />
       <Ceremonies />
       <CtaBand />

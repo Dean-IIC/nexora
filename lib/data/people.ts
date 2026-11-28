@@ -11,14 +11,14 @@ export const college = {
   city: "Bengaluru, Karnataka",
   // TODO: review this copy with the college before publishing widely.
   summary:
-    "HKBK College of Engineering is an engineering institution in Bengaluru affiliated to Visvesvaraya Technological University (VTU) and approved by AICTE. The college offers undergraduate and postgraduate programmes across computer science, artificial intelligence, electronics and allied engineering disciplines.",
+    "HKBK College of Engineering is an engineering institution in Bengaluru affiliated to Visvesvaraya Technological University (VTU) and approved by AICTE. Its departments include Computer Science & Engineering (CSE), Artificial Intelligence & Machine Learning (AIML), Electronics & Communication Engineering (ECE), Information Science & Engineering (ISE) and Mechanical Engineering (ME).",
   detail:
     "With active student chapters, research labs and strong industry connections, HKBK encourages students to learn by building. Nexora is the college's flagship hackathon, bringing together students, faculty and industry experts to solve real problems in cyber security and edge computing.",
   highlights: [
     { label: "Affiliation", value: "VTU, Belagavi" },
     { label: "Approval", value: "AICTE" },
     { label: "Location", value: "Bengaluru" },
-    { label: "Host departments", value: "AIML & ECE" },
+    { label: "Departments", value: "CSE · AIML · ECE · ISE · ME" },
   ],
 };
 
@@ -28,7 +28,6 @@ export type Department = {
   name: string;
   about: string;
   focus: string[];
-  hod: Person & { bio?: string };
   accent: "iot" | "cyber";
 };
 
@@ -40,7 +39,6 @@ export const departments: Department[] = [
     about:
       "The AIML department trains engineers to design intelligent systems — from data and learning algorithms to secure, responsible deployment. Its students bring machine-learning depth to threat detection, anomaly analysis and on-device intelligence.",
     focus: ["Machine learning", "Deep learning", "Data analytics", "AI for security"],
-    hod: { name: "Dr. Tabassum", role: "Head of Department, AIML & Dean, IIC", photo: "/team/hod-aiml-tabassum.webp" }, // TODO: add bio
     accent: "cyber",
   },
   {
@@ -50,7 +48,6 @@ export const departments: Department[] = [
     about:
       "The ECE department covers embedded systems, VLSI, communication and signal processing — the hardware foundations of every edge device. Its labs and faculty anchor the hands-on side of Nexora's Edge IoT track.",
     focus: ["Embedded systems", "IoT", "VLSI", "Wireless communication"],
-    hod: { name: "Dr. Manjunath", role: "Head of Department, ECE", photo: "/team/hod-ece-manjunath.webp" }, // TODO: add bio
     accent: "iot",
   },
 ];

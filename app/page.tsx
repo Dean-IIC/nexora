@@ -2,7 +2,7 @@ import { AboutCollege } from "@/components/features/about-college";
 import { Ceremonies } from "@/components/features/ceremonies";
 import { CtaBand } from "@/components/features/cta-band";
 import { Hero } from "@/components/features/hero";
-import { HodSpotlight } from "@/components/features/hod-spotlight";
+import { DepartmentSection } from "@/components/features/department-section";
 import { Milestones } from "@/components/features/milestones";
 import { PartnerStrip } from "@/components/features/partner-strip";
 import { SectionHeading } from "@/components/features/section-heading";
@@ -22,8 +22,8 @@ export default function HomePage() {
       <StatsStrip />
       <AboutCollege />
       <OurLeaders id="team" />
-      {aiml && <HodSpotlight department={aiml} />}
-      {ece && <HodSpotlight department={ece} reverse />}
+      {aiml && <DepartmentSection department={aiml} />}
+      {ece && <DepartmentSection department={ece} reverse />}
       <Ceremonies />
       <section aria-labelledby="tracks-heading" className="mx-auto max-w-7xl space-y-12 px-4 py-24 sm:px-6">
         <SectionHeading
