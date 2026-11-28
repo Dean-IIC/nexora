@@ -34,13 +34,30 @@ export function Avatar({ person, size = "md", className }: { person: Person; siz
 }
 
 /** Profile card. When no name is set, the role becomes the heading. */
-export function PersonCard({ person, className }: { person: Person; className?: string }) {
+export function PersonCard({
+  person,
+  size = "lg",
+  className,
+}: {
+  person: Person;
+  size?: "md" | "lg";
+  className?: string;
+}) {
   return (
-    <div className={cn("flex h-full flex-col items-center gap-3 rounded-xl border bg-card p-5 text-center backdrop-blur transition-colors hover:border-primary/40", className)}>
-      <Avatar person={person} size="lg" />
-      <div className="space-y-1">
-        <h3 className="leading-tight font-semibold">{person.name ?? person.role}</h3>
-        {person.name && <p className="text-sm text-primary">{person.role}</p>}
+    <div
+      className={cn(
+        "flex h-full flex-col items-center gap-3 rounded-xl border bg-card text-center backdrop-blur transition-colors hover:border-primary/40",
+        size === "lg" ? "p-5" : "px-3 py-4",
+        className,
+      )}
+    >
+      <Avatar person={person} size={size} />
+      <div className="flex flex-1 flex-col items-center gap-1">
+        {/* Reserve two lines for the name so roles line up across a row. */}
+        <h3 className={cn("flex min-h-[2.5em] items-center leading-tight font-semibold", size === "md" && "text-sm")}>
+          {person.name ?? person.role}
+        </h3>
+        {person.name && <p className={cn("text-primary", size === "lg" ? "text-sm" : "text-xs")}>{person.role}</p>}
         {person.org && <p className="text-xs text-muted-foreground">{person.org}</p>}
       </div>
     </div>
